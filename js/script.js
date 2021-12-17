@@ -27,18 +27,27 @@ function createBoxGrid (container) {
 
 // 3. creo ciclo for per replicare boxes all'evento click in base al lvl scelto
 easyLevelButton.addEventListener('click', function (){
+    // setto la pulizia della griglia ad ogni click
+    boxes.innerHTML = '';
+    // genero 100 box
     for (let i = 1; i <= 100; i++) {
         createBoxGrid(boxes); 
     }
 });
 
 mediumLevelButton.addEventListener('click', function (){
+    // setto la pulizia della griglia ad ogni click
+    boxes.innerHTML = '';
+    // genero 81 box
     for (let i = 1; i <= 81; i++) {
         createBoxGrid(boxes); 
     }
 });
 
 hardLevelButton.addEventListener('click', function (){
+    // setto la pulizia della griglia ad ogni click
+    boxes.innerHTML = '';
+    // genero 49 box
     for (let i = 1; i <= 49; i++) {
         createBoxGrid(boxes); 
     }
