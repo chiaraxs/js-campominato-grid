@@ -13,7 +13,7 @@ const mediumLevelButton = document.getElementById("medium-button");
 const hardLevelButton = document.getElementById("hard-button");
 const boxes = document.querySelector('.container-box');
 
-// 2. creo funzione che per creare e appendere i boxes
+// 2. creo funzione per creare e appendere i boxes
 function createBoxGrid (container) {
     const square = document.createElement('div');
     square.className ='box';
@@ -29,7 +29,7 @@ function createBoxGrid (container) {
 easyLevelButton.addEventListener('click', function (){
     // setto la pulizia della griglia ad ogni click
     boxes.innerHTML = '';
-    // genero 100 box
+    // genero 100 boxes
     for (let i = 1; i <= 100; i++) {
         createBoxGrid(boxes); 
     }
@@ -38,7 +38,7 @@ easyLevelButton.addEventListener('click', function (){
 mediumLevelButton.addEventListener('click', function (){
     // setto la pulizia della griglia ad ogni click
     boxes.innerHTML = '';
-    // genero 81 box
+    // genero 81 boxes
     for (let i = 1; i <= 81; i++) {
         createBoxGrid(boxes); 
     }
@@ -47,7 +47,7 @@ mediumLevelButton.addEventListener('click', function (){
 hardLevelButton.addEventListener('click', function (){
     // setto la pulizia della griglia ad ogni click
     boxes.innerHTML = '';
-    // genero 49 box
+    // genero 49 boxes
     for (let i = 1; i <= 49; i++) {
         createBoxGrid(boxes); 
     }
