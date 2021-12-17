@@ -6,7 +6,38 @@
 }
 
 /* font style */
-h1{
+h1, h3{
     text-align: center;
-    margin: 20px;
+    margin: 20px; 
+}
+
+/* button style */
+.container-button{
+    display: flex;
+    justify-content: center;
+}
+
+.container-button button {
+    width: 100px;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+/* box style */
+.container-box{
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 100px auto;
+}
+
+.box{
+    border: 2px #000 solid;
+    width: 50px;
+    height: 50px;
+}
+
+.box.blue{
+    background-color: cornflowerblue;
 }
