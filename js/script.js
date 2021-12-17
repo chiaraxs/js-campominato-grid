@@ -52,4 +52,3 @@ hardLevelButton.addEventListener('click', function (){
         createBoxGrid(boxes); 
     }
 });
-
