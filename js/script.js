@@ -6,14 +6,7 @@
 // con difficoltà 3 => tra 1 e 49
 // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
-
-// 1. fisso i selettori tra js e html -> 3 buttons + container-box da replicare con ciclo for
-const easyLevelButton = document.getElementById("easy-button");
-const mediumLevelButton = document.getElementById("medium-button");
-const hardLevelButton = document.getElementById("hard-button");
-const boxes = document.querySelector('.container-box');
-
-// 2. creo funzione per creare e appendere i boxes
+// 1. creo funzione per creare e appendere i boxes
 function createBoxGrid (container) {
     const square = document.createElement('div');
     square.className ='box';
@@ -24,6 +17,13 @@ function createBoxGrid (container) {
     this.classList.add('blue');   
     })
 }
+
+// 2. fisso selettori tra js e html -> 3 buttons + container-box da replicare con ciclo for
+const easyLevelButton = document.getElementById("easy-button");
+const mediumLevelButton = document.getElementById("medium-button");
+const hardLevelButton = document.getElementById("hard-button");
+const boxes = document.querySelector('.container-box');
+
 
 // 3. creo ciclo for per replicare boxes all'evento click in base al lvl scelto
 easyLevelButton.addEventListener('click', function (){
@@ -36,8 +36,7 @@ easyLevelButton.addEventListener('click', function (){
         // aggiungo classe widht dal css x lvl simple
         boxes.classList.add('width_simple');
         // rimuovo classi widht dal css x lvl medium/hard
-        boxes.classList.remove('width_medium');
-        boxes.classList.remove('width_hard');
+        boxes.classList.remove('width_medium', 'width_hard');
     }
 });
 
@@ -51,8 +50,7 @@ mediumLevelButton.addEventListener('click', function (){
         // aggiungo classe widht dal css x lvl medium
         boxes.classList.add('width_medium');
         // rimuovo classi widht dal css x lvl simple/hard
-        boxes.classList.remove('width_simple');
-        boxes.classList.remove('width_hard');
+        boxes.classList.remove('width_simple', 'width_hard');
     }
 });
 
@@ -66,7 +64,6 @@ hardLevelButton.addEventListener('click', function (){
         // aggiungo classe widht dal css x lvl hard
         boxes.classList.add('width_hard');
         // rimuovo classi widht dal css x lvl simple/medium
-        boxes.classList.remove('width_simple');
-        boxes.classList.remove('width_medium');
+        boxes.classList.remove('width_simple', 'width_medium');
     }
 });

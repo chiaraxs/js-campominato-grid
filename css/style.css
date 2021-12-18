@@ -37,11 +37,9 @@ h1, h3{
     height: 50px;
 }
 
-.box.blue{
-    background-color: cornflowerblue;
-}
 
-/* classi width aggiunge da js in base al lvl */
+/* ----- JS ---- */
+/* classi width aggiunte da js in base al lvl */
 .width_simple {
     width: 500px;
 }
@@ -52,4 +50,9 @@ h1, h3{
 
 .width_hard {
     width: 350px;
+}
+
+/* change bg on click */
+.box.blue{
+    background-color: cornflowerblue;
 }
