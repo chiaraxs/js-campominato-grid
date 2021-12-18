@@ -32,6 +32,12 @@ easyLevelButton.addEventListener('click', function (){
     // genero 100 boxes
     for (let i = 1; i <= 100; i++) {
         createBoxGrid(boxes); 
+
+        // aggiungo classe widht dal css x lvl simple
+        boxes.classList.add('width_simple');
+        // rimuovo classi widht dal css x lvl medium/hard
+        boxes.classList.remove('width_medium');
+        boxes.classList.remove('width_hard');
     }
 });
 
@@ -41,6 +47,12 @@ mediumLevelButton.addEventListener('click', function (){
     // genero 81 boxes
     for (let i = 1; i <= 81; i++) {
         createBoxGrid(boxes); 
+
+        // aggiungo classe widht dal css x lvl medium
+        boxes.classList.add('width_medium');
+        // rimuovo classi widht dal css x lvl simple/hard
+        boxes.classList.remove('width_simple');
+        boxes.classList.remove('width_hard');
     }
 });
 
@@ -50,5 +62,11 @@ hardLevelButton.addEventListener('click', function (){
     // genero 49 boxes
     for (let i = 1; i <= 49; i++) {
         createBoxGrid(boxes); 
+
+        // aggiungo classe widht dal css x lvl hard
+        boxes.classList.add('width_hard');
+        // rimuovo classi widht dal css x lvl simple/medium
+        boxes.classList.remove('width_simple');
+        boxes.classList.remove('width_medium');
     }
 });

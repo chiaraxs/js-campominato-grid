@@ -26,7 +26,6 @@ h1, h3{
 
 /* box style */
 .container-box{
-    max-width: 500px;
     display: flex;
     flex-wrap: wrap;
     margin: 10px auto;
@@ -40,4 +39,17 @@ h1, h3{
 
 .box.blue{
     background-color: cornflowerblue;
+}
+
+/* classi width aggiunge da js in base al lvl */
+.width_simple {
+    width: 500px;
+}
+
+.width_medium {
+    width: 450px;
+}
+
+.width_hard {
+    width: 350px;
 }
