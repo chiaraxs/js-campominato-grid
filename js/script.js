@@ -6,10 +6,11 @@
 // con difficoltà 3 => tra 1 e 49
 // Quando l’utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
-// 1. creo funzione per creare e appendere i boxes
-function createBoxGrid (container) {
-    const square = document.createElement('div');
+// 1. creo funzione per creare e appendere sia i boxes che i numeri al loro interno
+function createBoxGrid (container, number) {
+    let square = document.createElement('div');
     square.className ='box';
+    square.innerHTML = number;
     container.append(square);
 
     //stabilisco l'evento al click -> change bg in blue
@@ -31,7 +32,7 @@ easyLevelButton.addEventListener('click', function (){
     boxes.innerHTML = '';
     // genero 100 boxes
     for (let i = 1; i <= 100; i++) {
-        createBoxGrid(boxes); 
+        createBoxGrid(boxes, i); 
 
         // aggiungo classe widht dal css x lvl simple
         boxes.classList.add('width_simple');
@@ -45,7 +46,7 @@ mediumLevelButton.addEventListener('click', function (){
     boxes.innerHTML = '';
     // genero 81 boxes
     for (let i = 1; i <= 81; i++) {
-        createBoxGrid(boxes); 
+        createBoxGrid(boxes, i); 
 
         // aggiungo classe widht dal css x lvl medium
         boxes.classList.add('width_medium');
@@ -59,7 +60,7 @@ hardLevelButton.addEventListener('click', function (){
     boxes.innerHTML = '';
     // genero 49 boxes
     for (let i = 1; i <= 49; i++) {
-        createBoxGrid(boxes); 
+        createBoxGrid(boxes, i); 
 
         // aggiungo classe widht dal css x lvl hard
         boxes.classList.add('width_hard');
